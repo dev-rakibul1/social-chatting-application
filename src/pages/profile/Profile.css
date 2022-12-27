@@ -5,3 +5,7 @@
   vertical-align: middle;
   width: 100%;
 }
+
+.profile-picture {
+  border: 1px solid white;
+}

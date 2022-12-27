@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../pages/footer/Footer";
 import Navbar from "../pages/shared/Navbar";
 
 const ProfileLayout = () => {
@@ -7,6 +8,7 @@ const ProfileLayout = () => {
     <div>
       <Navbar />
       <Outlet />
+      <Footer />
     </div>
   );
 };

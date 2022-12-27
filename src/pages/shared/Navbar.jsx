@@ -5,23 +5,25 @@ const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <Link to="/" href="#">
-          Home
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/media">Media</Link>
+      </li>
+      <li>
+        <Link to="/message">
+          <div className="relative">message</div>
+          <span className="absolute top-[-2px] right-[5px] text-white bg-red-600 w-5 h-5 text-center rounded-full">
+            2
+          </span>
         </Link>
       </li>
       <li>
-        <Link to="/" href="#">
-          Media
-        </Link>
-      </li>
-      <li>
-        <Link to="/" href="#">
-          about
-        </Link>
-      </li>
-      <li>
-        <Link to="/" href="#">
-          contact
+        <Link to="/notifications">
+          <div className="relative">Notifications</div>
+          <span className="absolute top-[-2px] right-[5px] text-white bg-red-600 w-5 h-5 text-center rounded-full">
+            1
+          </span>
         </Link>
       </li>
     </>
@@ -29,9 +31,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-green-900">
+      <div
+        className="bg-green-900"
+        style={{ position: "sticky", top: "0", zIndex: 1090 }}
+      >
         {/* second nav */}
-        <div className="navbar max-w-[90%] mx-auto text-white">
+        <div className="navbar max-w-[80%] mx-auto text-white">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
