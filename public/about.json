@@ -1,0 +1,27 @@
+[
+  {
+    "name": "John Doe",
+    "email": "jhondoe@gmail.com",
+    "mobile": "+47 457 897 24",
+    "website": "https://mywebstite.com",
+
+    "school": "Victoria high school Dhaka",
+    "schoolStartDate": "27-12-2010",
+    "schoolSEndDate": "27-12-2015",
+    "schoolDetails": "A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers. Most countries have systems of formal education, which is sometimes compulsory. In these systems, students progress through a series of schools.",
+
+    "college": "Dhaka university",
+    "collegeStartDate": "27-12-2015",
+    "collegeSEndDate": "27-12-2018",
+    "collegeDetails": "Start with a greeting – just like you would when you introduce yourself in person, say 'Hello'. Or, more specifically, say 'Hi' to reduce character count! Explain who you are – include your name and business. You can do this via a signature at the end of your text or weave it into the content at the beginning",
+
+    "work": "Software developer at CGI",
+    "workDetails": "A job description is a useful, plain-language tool that explains the tasks, duties, function and responsibilities of a position. It details who performs a specific type of work, how that work is to be completed, and the frequency and the purpose of the work as it relates to the organization's mission and goals.",
+
+    "address": "flat #3 (1st floor), eskaton garden road, ramna, 1000",
+    "gender": "Male",
+    "relational": "Single",
+    "language": "Bangla, English",
+    "religion": "Islam"
+  }
+]
