@@ -6,13 +6,13 @@ const placeholderProfile = "../../images/placeholder-person.png";
 
 const Profile = () => {
   return (
-    <div className=" mx-auto max-w-[60%]">
+    <div className=" mx-auto max-w-[60%] bg-white p-4">
       <div className="profile-wrapper">
         <div className="profile-top relative">
           <img
             src={coverPhoto}
             alt="cover"
-            className="profile-cover-photo max-w-full w-screen object-cover h-72"
+            className="profile-cover-photo max-w-full w-screen object-cover h-72 rounded-lg"
           />
           <div className="profile   flex items-end">
             <img

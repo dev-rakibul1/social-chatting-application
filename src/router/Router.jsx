@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import MessageDetails from "../components/messageDetails/MessageDetails";
 import MediaLayout from "../layout/MediaLayout";
 import ProfileLayout from "../layout/ProfileLayout";
 import Root from "../layout/Root";
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
 
       { path: "/message", element: <Message /> },
       { path: "/notifications", element: <Notifications /> },
+      { path: "/messageDetails", element: <MessageDetails /> },
     ],
   },
 
