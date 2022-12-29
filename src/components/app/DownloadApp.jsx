@@ -25,7 +25,7 @@ const DownloadApp = () => {
               className="md:max-w-[40%] max-w-[50%] py-4"
               alt=""
             />
-            <button className="btn btn-primary">
+            <button className="btn btn-primary mt-16">
               Get Download <Download />{" "}
             </button>
           </div>

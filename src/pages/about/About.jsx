@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   const [abouts, setAbouts] = useState([]);
   useEffect(() => {
-    fetch("/about.json")
+    fetch("https://project-01-server.vercel.app")
       .then((res) => res.json())
       .then((data) => setAbouts(data))
       .catch((err) => console.log(err));
@@ -13,18 +13,17 @@ const About = () => {
   return (
     <>
       <div>
-        <div
-          className="flex items-center py-4 "
-          style={{ justifyContent: "space-between" }}
-        >
-          <h3 className="font-bold text-xl">Personal information</h3>
-          <Link>
-            <h3 className="font-bold text-xl">Edit</h3>
-          </Link>
-        </div>
-
         {abouts?.map((about) => (
-          <div>
+          <div key={about._id}>
+            <div
+              className="flex items-center py-4 "
+              style={{ justifyContent: "space-between" }}
+            >
+              <h3 className="font-bold text-xl">Personal information</h3>
+              <Link to={`/editme/${about._id}`}>
+                <h3 className="font-bold text-xl">Edit</h3>
+              </Link>
+            </div>
             <div>
               <div className="text-gray-700">
                 <h4 className="mt-1 text-md">
