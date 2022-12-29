@@ -39,9 +39,9 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path: "/editme/:id",
+        path: "/editme",
         element: <EditAbout />,
-        loader: () => fetch("https://project-01-server.vercel.app"),
+        loader: () => fetch(`https://project-01-server.vercel.app/about/`),
       },
     ],
   },
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: "/media",
         element: <Media />,
-        loader: () => fetch("http://localhost:8000/posts"),
+        loader: () => fetch("https://project-01-server.vercel.app/posts"),
       },
     ],
   },

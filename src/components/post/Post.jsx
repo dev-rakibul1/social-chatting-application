@@ -45,7 +45,7 @@ const Post = () => {
           };
 
           // POST request
-          fetch("http://localhost:8000/posts", {
+          fetch("https://project-01-server.vercel.app/posts", {
             method: "POST",
             headers: {
               "content-type": "application/json",

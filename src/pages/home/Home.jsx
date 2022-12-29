@@ -10,7 +10,7 @@ const Home = () => {
   const [topPost, setTopPost] = useState([]);
   const { name } = useContext(AuthProvider);
 
-  fetch("http://localhost:8000/top-posts")
+  fetch("https://project-01-server.vercel.app/top-posts")
     .then((res) => res.json())
     .then((data) => setTopPost(data))
     .catch((err) => console.log(err));

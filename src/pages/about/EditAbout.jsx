@@ -9,6 +9,11 @@ const EditAbout = () => {
   // const [users, setUsers] = useState(personalData);
   // console.log(users[0]);
 
+  console.log(
+    "first oisdoqewiu oweujfo weij qoeru qwoeif qweurqeoi ruoqewowe oqweiru",
+    personalData
+  );
+
   const handleUserUpdateData = (event) => {
     // console.log(id);
     event.preventDefault();
