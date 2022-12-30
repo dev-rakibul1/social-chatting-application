@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import Spinner from "../../pages/shared/Spinner";
 
 const Post = () => {
+  const [loading, setLoading] = useState(false);
+
   const handleUserPost = (event) => {
     event.preventDefault();
 
+    setLoading(true);
+
     const form = event.target;
     const message = form.message.value;
-    const image = form.image.files[0].name;
+    // const image = form.image.files[0].name;
+    const image = form.image.files[0];
     console.log(message, image);
+    console.log("first images", image);
 
     // user images
     const imagesHostKey = process.env.REACT_APP_IMAGES_HOST_KEY;
@@ -24,6 +31,8 @@ const Post = () => {
     })
       .then((res) => res.json())
       .then((imgData) => {
+        setLoading(false);
+
         if (imgData) {
           const serverImages = imgData;
           console.log(serverImages);
@@ -54,18 +63,24 @@ const Post = () => {
           })
             .then((res) => res.json())
             .then((data) => {
+              setLoading(false);
               if (data.success) {
                 alert(data.message);
               } else {
                 alert(data.error);
               }
             })
-            .catch((error) => console.log(error));
+            .catch((error) => {
+              console.log(error);
+              setLoading(false);
+            });
         } else {
           alert("not success");
         }
       })
       .catch((error) => console.log(error));
+
+    form.reset();
   };
 
   return (
@@ -82,6 +97,7 @@ const Post = () => {
               className="textarea  border-2 border-gray-300 h-full w-full "
               placeholder="Your message..."
               name="message"
+              required
             ></textarea>
           </div>
 
@@ -91,12 +107,17 @@ const Post = () => {
               type="file"
               className="file-input w-full border-2 border-gray-300"
               name="image"
+              required
             />
           </div>
 
-          <button type="submit" class="btn btn-primary mt-4 w-full">
-            Post now
-          </button>
+          {loading ? (
+            <Spinner>Loading...</Spinner>
+          ) : (
+            <button type="submit" class="btn btn-primary mt-4 w-full">
+              Post now
+            </button>
+          )}
         </form>
       </div>
     </div>
